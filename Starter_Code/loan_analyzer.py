@@ -140,12 +140,14 @@ print("")
 print("Part 3: Financial Calculations")
 print("")
 
-def present_value_new_loan():
-    return round(new_loan.get('future_value')/ (1 + annual_discount_rate/12)**new_loan.get('remaining_months'), 2)
-    
-present_value_new_loan = present_value_new_loan()
-print(f"The present value of the new loan is: {present_value_new_loan}")
+future_value = new_loan.get('future_value')
+remaining_months = new_loan.get('remaining_months')
 
+def present_value_new_loan(future_value, remaining_months):
+    return round(future_value/ (1 + annual_discount_rate/12)**remaining_months, 2)
+    
+present_value_new_loan(future_value, remaining_months)
+print(f"The present value of the new loan is: {present_value_new_loan(future_value,remaining_months)}")
 
 """Part 4: Conditionally filter lists of loans.
 
