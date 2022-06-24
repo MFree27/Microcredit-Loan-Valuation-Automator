@@ -177,7 +177,7 @@ inexpensive_loans= []
 # YOUR CODE HERE!
 
 
-
+#I used price_1 instead of loan_price so that I am not confused with the dictionary key and the variable
 for price_1 in loans:
     if price_1["loan_price"] <= 500:
         inexpensive_loans.append(price_1)
